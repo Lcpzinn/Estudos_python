@@ -1,0 +1,17 @@
+import matplotlib.pyplot as plt
+
+n = 10
+
+x = list(range(0, n + 1))
+y = x.copy()
+
+plt.figure(figsize=(10, 5))
+plt.step(x, y, where='post', label='Escada', color='blue')
+
+plt.title('Escada de Tamanho Arbitrário')
+plt.xlabel('x')
+plt.ylabel('y')
+plt.grid(True)
+plt.legend()
+
+plt.savefig('escada_arbitraria.png')

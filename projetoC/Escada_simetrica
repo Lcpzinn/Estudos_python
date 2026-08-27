@@ -1,0 +1,24 @@
+import matplotlib.pyplot as plt
+import numpy as np
+
+# Definindo os eixos X para cada trecho da escada
+x_subida = np.arange(0, 11)
+x_descida = np.arange(10, 21)
+
+# Alturas correspondentes (1 unidade por degrau)
+y_subida = x_subida
+y_descida = 20 - x_descida
+
+# Criando o gráfico
+plt.figure(figsize=(10, 5))
+plt.step(x_subida, y_subida, where='post', label='Subindo', color='blue')
+plt.step(x_descida, y_descida, where='post', label='Descendo', color='red')
+
+# Ajustes de visualização
+plt.title('Escada Simétrica (Subida e Descida)')
+plt.xlabel('Largura')
+plt.ylabel('Altura')
+plt.grid(True)
+plt.legend()
+
+plt.savefig('escada_simetrica.png')

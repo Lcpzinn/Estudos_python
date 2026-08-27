@@ -1,0 +1,16 @@
+import matplotlib.pyplot as plt
+import numpy as np
+
+t = np.linspace(0, 6 * 2 * np.pi, 500)
+
+x = t * np.cos(t)
+y = t * np.sin(t)
+
+plt.plot(x, y, label='Caracol', color='green')
+plt.axis('equal')
+plt.legend()
+plt.title('Caracol')
+plt.xlabel('x')
+plt.ylabel('y')
+plt.grid(True)
+plt.savefig('caracol.png')
